@@ -1,0 +1,116 @@
+    <head>
+        <title>Register</title>
+        <link type="text/css" rel="stylesheet" href = "/css/register.css">
+    </head>
+    <body>
+        <div class="reg-form" id="flow1">
+            <form action="/users/add" method="post">
+                <input id="email" name="email" placeholder="Email"><br>
+                <input id="name" name="name" placeholder="Name" required><br>
+                <input id="password" type = "password" name="password" placeholder="Password"required><br>
+                <input id="dob" type = "string" name="dob" placeholder="Date Of Birth" required>
+                <input type = "submit" value="Sumit">
+            </form>
+            {{!-- <button onclick="sendReg()">Register</button> --}}
+        </div>
+         
+        <div class="artists" id="flow2">
+
+            <div class = "icons">
+                <div class = "artist">
+                </div>
+                <div class = "artist">
+                </div>
+                <div class = "artist">
+                </div>
+                <div class = "artist">
+                </div>
+            </div>
+
+            <div class = "back">
+                <button id="backButon" onclick = 'flowReg()'>Back</button>
+            </div>
+          
+        </div>
+
+
+        <div class="artists" id="flow2">
+
+            <div class = "icons">
+                <div class = "artist">
+                </div>
+                <div class = "artist">
+                </div>
+                <div class = "artist">
+                </div>
+                <div class = "artist">
+                </div>
+            </div>
+
+            <!-- <div class = "back">
+                <button id="backButon" onclick = 'flowReg()'>Back</button>
+            </div> -->
+
+            <div class = "next">
+                <button id="nextButton" onclick = 'flowGenre()'>Next</button>
+            </div>
+              
+        </div>
+
+
+        <div class="genres" id="flow3">
+
+            <div class = "icons">
+                <div class = "genre">
+                </div>
+                <div class = "genre">
+                </div>
+                <div class = "genre">
+                </div>
+                <div class = "genre">
+                </div>
+            </div>
+
+            <div class = "back">
+                <button id="backButon" onclick = 'flowReg()'>Back</button>
+            </div>
+                  
+         </div>
+    
+
+    </body>
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+    <script>
+        let flowReg = ()=>{
+            document.getElementById('flow1').style.display = 'block';
+            document.getElementById('flow2').style.display = 'none';
+        }
+        let flowArtists = ()=>{
+            document.getElementById('flow1').style.display = 'none';
+            document.getElementById('flow2').style.display = 'block';
+        }
+        let flowGenre = ()=>{
+            document.getElementById('flow2').style.display = 'none';
+            document.getElementById('flow3').style.display = 'block';
+        }
+        sendReg = ()=>{
+         let data = {
+           email : document.getElementById("email").value,
+           password : document.getElementById("password").value,
+           name: document.getElementById("name").value,
+           dob: document.getElementById("dob").value
+        };
+        $.ajax({
+           type: 'POST',
+           data: JSON.stringify(data),
+           contentType: 'application/json',
+           url: '/users/add'
+        })
+      
+        flowArtists();
+    }
+    </script>

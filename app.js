@@ -1,12 +1,21 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
+const bodyParser = require('body-parser');
 
 //connect port
 const PORT = process.env.PORT || 3000;
 const app = express();
 
+//bodyParser
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
+
 //load routes
 const users = require('./routes/users')
+
+//static files
+app.use(express.static(__dirname+'/public'));
 
 
 //handlebars

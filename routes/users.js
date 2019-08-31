@@ -22,8 +22,14 @@ MongoClient.connect(url, function(err, db) {
 });
 }
 
+//Index
+router.get('/', (req,res)=>{
+  res.render("users/register");
+})
+
 //index
 router.post("/add",async (req, res) => {
+  console.log(req.body);
   var newUser = { 
     name:req.body.name,
     login_password:req.body.password,

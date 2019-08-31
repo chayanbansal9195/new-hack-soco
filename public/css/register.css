@@ -1,0 +1,21 @@
+.body{
+    margin:0;
+    padding:0;
+}
+
+.reg-form , .artists{
+    position: absolute;
+}
+.artists,.genres{
+    display:none;
+}
+.artists .icons div{
+    float:left;
+    height:100px;
+    width:100px;
+    border-radius: 50%;
+    background: green;
+}
+.genres .icons .div{
+    background: red;
+}
