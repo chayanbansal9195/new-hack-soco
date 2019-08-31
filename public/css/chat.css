@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+body{
+    background: #fbfbfb;
+}
+
+.top{
+    background: linear-gradient(to right, pink,hotpink);
+    height: 98px;
+}
+
+.prev-song{
+    height: 55px;
+    background: #313131;
+}
+
+.chat-screen{
+    height: 600px;
+    background: black;
+}
+
+.send-msg-cont{
+    margin-bottom: 100px;
+    background: red;
+}
