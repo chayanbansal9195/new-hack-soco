@@ -1,28 +1,68 @@
-*{
-    margin: 0;
-    padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    background: #fbfbfb;
+body {
+  background: #fbfbfb;
 }
 
-.top{
-    background: linear-gradient(to right, pink,hotpink);
-    height: 98px;
+.top {
+  background: transparent linear-gradient(77deg, #a3278e 0%, #70416d 100%) 0% 0%
+    no-repeat padding-box;
+  height: 98px;
+  opacity: 1;
+}
+.pic {
+  top: 24px;
+  left: 52px;
+  width: 37px;
+  height: 37px;
+  background: transparent url("/images/1.") 0% 0% no-repeat padding-box;
+  opacity: 1;
 }
 
-.prev-song{
-    height: 55px;
-    background: #313131;
+.prev-song {
+  height: 55px;
+  top: 83px;
+  left: 0px;
+  width: 375px;
+  height: 55px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+.prev-song p {
+  top: 104px;
+  left: 64px;
+  width: 184px;
+  height: 13px;
+  text-align: left;
+  font: Book 12px/13px Gotham;
+  letter-spacing: 0;
+  color: #707070;
+  opacity: 1;
 }
 
-.chat-screen{
-    height: 600px;
-    background: black;
+.chat-screen {
+  height: 600px;
+  top: 0px;
+  left: 0px;
+  width: 375px;
+  height: 812px;
+  background: #fbfbfb 0% 0% no-repeat padding-box;
+  opacity: 1;
 }
 
-.send-msg-cont{
-    margin-bottom: 100px;
-    background: red;
+.send-msg-cont {
+  margin-bottom: 100px;
+  background: red;
+}
+.send-msg {
+  top: 744px;
+  left: 30px;
+  width: 269px;
+  height: 49px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 10px #0000001a;
+  opacity: 1;
 }

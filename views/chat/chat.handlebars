@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-                Chats
-        </title>
-        <link rel="stylesheet" href="chat.css"
-    </head>
-    <body>
-        <div class = "container">
-            <div class = "top">
-                <div class = "content">
-                    <div class = "pic">
 
-                    </div>
+<head>
+    <title>
+        Chats
+    </title>
+    <link rel="stylesheet" href="/css/chat.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
+</head>
 
-                    <div class = "name">
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="content">
+                <div class="pic">
 
-                    </div>
+                </div>
 
-                    <div class = "menu">
-                        
-                    </div>
+                <div class="name">
+
+                </div>
+
+                <div class="menu">
 
                 </div>
 
             </div>
 
-            <div class = "prev-song">
-
-            </div>
-
-            <div class = "chat-screen">
-                <ul id="messages">
-                    <li>Hi </li>
-                    <li>Wassup</li>
-                </ul>
-            </div>
-
-            <div class = "send-msg-cont">
-              
-                <form class="send-msg" action = "">
-                    <input id = "m" autocomplete="off"/>
-                    <button id="send"><img src="send-2.svg"></button>
-                </form>
-                
-            </div>
         </div>
-    </body>
+
+        <div class="prev-song">
+            <p>Flute Melodies - Played Earlier</p>
+        </div>
+
+        <div class="chat-screen">
+            <ul id="messages"></ul>
+        </div>
+
+        <div class="send-msg-cont">
+
+            <form class="send-msg" action="">
+                <select name="" id="mu">
+                    <option value="">Select</option>
+                    <option value="indipop.mp3">Prada</option>
+                    <option value="mn.mp3">Indi</option>
+                    <option value="punjabi.mp3">asd</option>
+                </select>
+                <button id="send">Send</button>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+
 </html>

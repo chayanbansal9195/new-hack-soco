@@ -4,7 +4,7 @@ const router = express.Router();
 
 //mongo
 const MongoClient = mongodb.MongoClient;
-var url = "mongodb://localhost:27017/socomodb";
+const url = "mongodb://localhost:27017/socomodb";
 
 //add user data
 function insertUser(newUser){
@@ -37,7 +37,7 @@ router.post("/add",async (req, res) => {
     email_id:req.body.email
   };
     await insertUser(newUser)
-  res.render("users/index");
+  res.render("users/register");
 });
 
 module.exports = router;
