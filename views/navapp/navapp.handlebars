@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Friends</title>
+    </head>
+    <link rel="stylesheet" href = "css/friends.css">
+    <body>
+        
+
+        <!-- FRIENDS              -->
+        <div id = "friends">
+            <div class = "container-friends">
+                <div class = "top">
+                    <input placeholder = "search your friends" class = "search" type = "text">
+                    <img class="imgg" src = "images/search.png">
+                </div>
+                <div class = 'tabs'>
+                    <span class = "all">All Friends</span>
+                    <span class = "req">Requests</span>
+                </div>
+                <div class = "friends-sec">
+                    <div class = "friend">
+                        <div class = "pic">
+                            <!-- <img src = "#"> -->
+                        </div>
+                        <div class = "info">
+                            Atif Hossain
+                            <p>12 mutual interests</p>
+                        </div>
+                    </div>
+                    <div class = "friend">
+                            <div class = "pic">
+                                <!-- <img src = "#"> -->
+                            </div>
+                            <div class = "info">
+                                Atif Hossain
+                                <p>12 mutual interests</p>
+                            </div>
+                    </div>
+                    <div class = "friend">
+                            <div class = "pic">
+                                <!-- <img src = "#"> -->
+                            </div>
+                            <div class = "info">
+                                Saurabh Agarwal
+                                <p>5 mutual interests</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div id = "feed">
+            <div id = "container-feed">
+               <div class = "top">
+                   <div class = "posts">
+                        Posts
+                   </div>
+
+                   <div class = "trending">
+                        Trending
+                   </div>
+               </div>
+
+               <div class = "share">
+                   <div class = "share-tab">
+                        <input placeholder = "Share your thoughts" class = "search share-thoughts" type = "text">
+                   </div>
+                   <div class = "music-icon">
+                       <div class = "circle">
+
+                       </div>
+                   </div>
+               </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id = "search-tab">
+            <div id = "container-search-tab">
+                <h1>SEARCH</h1>
+            </div>
+        </div>
+
+
+
+        <div id = "community">
+            <div id = "container-community">
+                <div class = "top">
+                    <div class = "comm-image">
+                        <img src = "images/group.svg"></ims>
+                    </div>
+                    <div class = "title">
+                        <h1>Find Your Community</h1>
+                    </div>
+                </div>
+
+                <div class = "search">
+                </div>
+
+                <div class = "comm-icons">
+                    <div class = "comm-icon">
+                            <img src = "images/gujrati.svg">
+                    </div>
+                    <div class = "comm-icon">
+                            <img src = "images/gujrati.svg">
+                    </div>
+                    <!-- <div class = "comm-icon">
+                            <img src = "images/gujrati.svg">
+                    </div> -->
+                </div>
+
+               
+            </div>
+        </div>
+
+
+        <div id = "profile">
+            <div id = "container-profile">
+                <h1>PROFILE</h1>
+            </div>
+        </div>
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+     
+      
+
+        <div class = "bottom-nav">
+                <!-- <div class = "centre-image">
+                        <img src = "images/location.png">
+                </div> -->
+            <div class = "nav">
+                <div class = "feed nav-link" onclick = "switchFeed()">
+                    <img src = "images/feed.svg">
+                    <div class = "text">Feed</div>
+                </div>
+                <div class = "searchs nav-link" onclick = "switchSearch()">
+                    <img src = "images/ic_search_24px.svg">
+                    <div class = "text">Search</div>
+                </div>
+                <div class = "comm nav-link" onclick= 'switchComm()''>
+                    <img src = "images/multi_people.svg">
+                    <div class = "text">Community</div>
+                </div>
+                <div class = "friends nav-link" onclick = 'switchFriends()'>
+                    <img src = "images/friends_grey.svg">
+                    <div class = "text">Friends</div>
+                </div>
+                <div class = "profile nav-link" onclick = "switchProfile()">
+                    <img src = "images/single-01.svg">
+                    <div class = "text">Profile</div>
+                </div>
+            </div>
+
+        
+
+    </body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+    <script>
+
+        function switchFeed(){
+
+            $('.feed img').attr("src", "images/feed_white.png");
+
+            $('.text').hide();
+            $('.feed .text').show();
+
+            $('.nav > div').removeClass('nav-shade');   
+            $('.feed').addClass('nav-shade');
+           
+
+            document.getElementById('feed').style.display = 'block';
+            document.getElementById('friends').style.display = 'none';
+
+            document.getElementById('search-tab').style.display = 'none';
+            document.getElementById('community').style.display = 'none';
+            document.getElementById('profile').style.display = 'none';
+
+            
+        }
+
+        function switchSearch(){
+
+            $('.text').hide();
+            $('.searchs .text').show();
+
+            $('.nav > div').removeClass('nav-shade');
+            $('.searchs').addClass('nav-shade');
+
+            document.getElementById('search-tab').style.display = 'block';
+
+            document.getElementById('feed').style.display = 'none';
+            document.getElementById('community').style.display = 'none';
+            document.getElementById('friends').style.display = 'none';
+            document.getElementById('profile').style.display = 'none';
+        }
+
+        function switchComm(){
+
+            $('.text').hide();
+            $('.comm .text').show();
+
+            $('.nav > div').removeClass('nav-shade');
+            $('.comm').addClass('nav-shade');
+
+            document.getElementById('community').style.display = 'block';
+
+            document.getElementById('feed').style.display = 'none';
+            document.getElementById('search-tab').style.display = 'none';
+            document.getElementById('friends').style.display = 'none';
+            document.getElementById('profile').style.display = 'none';
+        }
+
+        function switchProfile(){
+
+            $('.text').hide();
+            $('.profile .text').show();
+
+            $('.nav > div').removeClass('nav-shade');
+            $('.profile').addClass('nav-shade');
+
+            document.getElementById('profile').style.display = 'block';
+
+            document.getElementById('feed').style.display = 'none';
+            document.getElementById('search-tab').style.display = 'none';
+            document.getElementById('friends').style.display = 'none';
+            document.getElementById('community').style.display = 'none';
+        }
+
+        function switchFriends(){
+
+            $('.text').hide();
+            $('.friends .text').show();
+
+            $('.nav > div').removeClass('nav-shade');
+            $('.friends').addClass('nav-shade');
+
+            document.getElementById('friends').style.display = 'block';
+
+            document.getElementById('feed').style.display = 'none';
+            document.getElementById('search-tab').style.display = 'none';
+            document.getElementById('profile').style.display = 'none';
+            document.getElementById('community').style.display = 'none';
+        }
+    </script>
+
+
+
+</html>
